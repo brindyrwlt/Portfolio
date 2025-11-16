@@ -1,0 +1,32 @@
+body {
+    cursor: url("./assets/duck_cursor.png"), auto;
+    width: 100vw;
+    height: 100vh;
+    font-family: PTSans-Regular;
+}
+
+@font-face {
+    font-family: PTSans-Regular;
+    src: url(assets/font/PTSans-Regular.ttf);
+}
+
+.topbar {
+    height: 5vh;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.topbar-right {
+    float: right;
+    margin-right: 2vw;
+}
+
+.topbar-item {
+    background-color: black;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+}
