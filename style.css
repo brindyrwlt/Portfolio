@@ -3,6 +3,15 @@
     src: url(assets/font/PTSans-Regular.ttf);
 }
 
+@font-face {
+    font-family: SpecialGothicExpandedOne-Regular;
+    src: url(assets/font/SpecialGothicExpandedOne-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     cursor: url("./assets/duck_cursor.png"), auto;
     width: 100vw;
@@ -13,15 +22,17 @@ body {
 }
 
 #topbar {
+    top: 0px;
+    z-index: 3;
     display: flex;
-    position: sticky;
-    height: 7vh;
+    position: fixed;
+    width: 100%;
     height: 7vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.61);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
@@ -53,17 +64,23 @@ body {
     align-items: center;
 }
 
-#main-title #title {
+#main-title #name {
+    margin-bottom: 0px;
+    font-family: SpecialGothicExpandedOne-Regular;
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 0px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
 }
 
 #main-title-background {
+    top: 0px;
     z-index: 0;
     width: 100vw;
     height: 90vh;
-    position: fixed;
+    position: absolute;
     background-size: 300% 300%;
     background-image: linear-gradient(-45deg, rgb(122, 111, 155) 0%, rgb(139, 133, 193) 25%, rgb(212, 205, 244) 51%, white 100%);
     -webkit-animation: AnimateBG 10s ease infinite;
@@ -96,4 +113,40 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#title {
+    font-family: SpecialGothicExpandedOne-Regular;
+    font-size: 32px;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            rgb(122, 111, 155) 0%,
+            rgb(139, 133, 193) 25%,
+            rgb(212, 205, 244) 51%,
+            rgb(139, 133, 193) 75%,
+            rgb(122, 111, 155) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+}
+
+#about-me {
+    margin-top: 60vh;
+    display: flex;
+    justify-content: center;
 }
