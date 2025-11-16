@@ -1,23 +1,28 @@
-body {
-    cursor: url("./assets/duck_cursor.png"), auto;
-    width: 100vw;
-    height: 100vh;
-    font-family: PTSans-Regular;
-}
-
 @font-face {
     font-family: PTSans-Regular;
     src: url(assets/font/PTSans-Regular.ttf);
 }
 
-.topbar {
-    height: 5vh;
+body {
+    cursor: url("./assets/duck_cursor.png"), auto;
+    width: 100vw;
+    height: 100vh;
+    font-family: PTSans-Regular;
+    margin: 0;
+    padding: 0;
+}
+
+#topbar {
+    display: flex;
+    height: 7vh;
+    height: 7vh;
     overflow: hidden;
-    justify-content: center;
     display: flex;
     align-items: center;
-
+    background-color: rgba(0, 255, 25, 0.2);
 }
+
+#topbar a {}
 
 .topbar-right {
     float: right;
@@ -25,8 +30,27 @@ body {
 }
 
 .topbar-item {
-    background-color: black;
     height: 100%;
     text-align: center;
     text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 1vw;
+}
+
+#main-title {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title #title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+#main-title #subtitle {
+    text-align: center;
 }
