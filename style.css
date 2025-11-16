@@ -21,6 +21,16 @@ body {
     padding: 0;
 }
 
+p::-moz-selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+p::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
 #topbar {
     top: 0px;
     z-index: 3;
