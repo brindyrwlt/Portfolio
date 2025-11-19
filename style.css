@@ -14,11 +14,10 @@ html {
 
 body {
     cursor: url("./assets/duck_cursor.png"), auto;
-    width: 100vw;
-    height: 100vh;
     font-family: PTSans-Regular;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 p::-moz-selection {
@@ -62,6 +61,15 @@ p::selection {
     color: black;
     font-size: 20px;
     margin: 1vw;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    transition: 0.2s linear;
+
+    &:hover {
+        /* transform: scale(2); */
+        text-transform: scale(1.2);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 }
 
 #main-title {
@@ -225,8 +233,69 @@ p::selection {
     animation: textclip 2s linear infinite;
 }
 
+.section {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #about-me {
     margin-top: 60vh;
-    display: flex;
-    justify-content: center;
+}
+
+@keyframes shadow {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#about-me #main-tile {
+    margin: 5vh;
+    width: 80vw;
+    height: 30vh;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 20px rgb(200, 200, 200);
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0.5px 0.5px 30px 0px rgba(139, 133, 193, 1);
+    }
+
+}
+
+#work-experiences {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(440px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
+}
+
+.work-experience {
+    width: 440px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 20px rgb(200, 200, 200);
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0.5px 0.5px 30px 0px rgba(139, 133, 193, 1);
+    }
 }
