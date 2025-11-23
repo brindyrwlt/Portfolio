@@ -74,9 +74,6 @@ li::selection {
     background: rgb(122, 111, 155);
 }
 
-
-
-
 /*--------------- Tiles ---------------*/
 
 .tab-show {
@@ -163,7 +160,7 @@ body.dark-mode #topbar {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-#topbar a {
+#topbar img {
     margin-left: 1vw;
 }
 
@@ -177,8 +174,8 @@ body.dark-mode #topbar {
     text-align: center;
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    margin: 1vw;
+    font-size: 18px;
+    margin: 0.1vw;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     transition: 0.2s ease-in-out;
@@ -196,6 +193,14 @@ body.dark-mode .topbar-item {
         font-size: 22px;
         background-color: rgba(20, 20, 20, 0.8);
     }
+}
+
+#cv-download {
+    background-color: rgb(122, 111, 155);
+}
+
+body #cv-download {
+    color: white;
 }
 
 /*--------------- Main Title ---------------*/
