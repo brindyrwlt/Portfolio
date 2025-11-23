@@ -1,6 +1,7 @@
 const favicon = document.querySelector("#favicon");
 const baseIcon = "http://127.0.0.1:5500/assets/img/duck_cursor.png"
 const reversedIcon = "http://127.0.0.1:5500/assets/img/duck_cursor_reversed.png"
+const audioFile = new Audio("./assets/audio/quack.mp3")
 const body = document.body
 
 console.log(favicon.href);
@@ -33,4 +34,7 @@ toggleButton.addEventListener("click", () => {
     } else {
         localStorage.setItem('theme', 'light');
     }
+
+    audioFile.fastSeek(0)
+    audioFile.play()
 })
