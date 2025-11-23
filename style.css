@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    cursor: url("./assets/duck_cursor.png"), auto;
+    cursor: url("assets/img/duck_cursor.png"), auto;
     font-family: PTSans-Regular, sans-serif;
     margin: 0;
     padding: 0;
@@ -39,6 +39,8 @@ p::selection {
     background: rgb(122, 111, 155);
 }
 
+/*--------------- Tiles ---------------*/
+
 .tab-show {
     display: grid;
     grid-template-columns: repeat(auto-fill,
@@ -59,6 +61,47 @@ p::selection {
     padding: 5%;
     align-items: center;
     justify-items: center;
+}
+
+.content-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 1px 1px 20px rgb(200, 200, 200);
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
+    }
+}
+
+body.dark-mode .content-tile {
+    background-color: rgb(50, 50, 50);
+    box-shadow: 1px 1px 20px rgb(130, 130, 130);
+    color: white;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
+    }
+}
+
+.content-tile h2 {
+    margin: 0 2rem;
+    color: rgb(122, 111, 155);
+}
+
+.content-tile p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-style: italic;
+    color: rgb(122, 111, 155);
 }
 
 /*--------------- Top Menu ---------------*/
@@ -193,7 +236,7 @@ body.dark-mode .topbar-item {
     height: 26px;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
-    left: 50%;
+    left: 49%;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);
     -moz-transform: translate(-50%, 0%) rotate(45deg);
     transform: translate(-50%, 0%) rotate(45deg);
@@ -300,22 +343,13 @@ body.dark-mode #scroll_down {
     margin-top: 60vh;
 }
 
-@keyframes shadow {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 300% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
-
-#about-me #main-tile {
-    margin: 5vh;
+#big-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*margin: 5vh;*/
+    margin: auto;
     width: 80vw;
     height: 30vh;
     background-color: white;
@@ -327,10 +361,57 @@ body.dark-mode #scroll_down {
         transform: scale(1.01);
         box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
     }
-
 }
 
-body.dark-mode #about-me #main-tile {
+#about-me-content ul {
+    list-style-type: none;
+}
+#about-me-content li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#about-me-content a {
+    color: black;
+}
+body.dark-mode #about-me-content a {
+    color: white;
+    transition: 0.25s ease-in-out;
+}
+
+/*.about-me-content {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 440px;*/
+/*    height: 250px;*/
+/*    background-color: white;*/
+/*    box-shadow: 1px 1px 20px rgb(200, 200, 200);*/
+/*    border-radius: 25px;*/
+/*    transition: 0.2s ease-in-out;*/
+
+/*    &:hover {*/
+/*        transform: scale(1.01);*/
+/*        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);*/
+/*    }*/
+/*}*/
+
+/*.about-me-content h2 {*/
+
+/*}*/
+
+/*body.dark-mode .about-me-content {*/
+/*    background-color: rgb(50, 50, 50);*/
+/*    box-shadow: 1px 1px 20px rgb(130, 130, 130);*/
+/*    color: white;*/
+
+/*    &:hover {*/
+/*        transform: scale(1.01);*/
+/*        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);*/
+/*    }*/
+/*}*/
+
+body.dark-mode #big-tile {
     background-color: rgb(50, 50, 50);
     box-shadow: 1px 1px 20px rgb(130, 130, 130);
     color: white;
@@ -384,47 +465,6 @@ body.dark-mode .diploma {
 }
 
 /*--------------- Work Experience ---------------*/
-
-.work-experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 440px;
-    height: 250px;
-    background-color: white;
-    box-shadow: 1px 1px 20px rgb(200, 200, 200);
-    border-radius: 25px;
-    transition: 0.2s ease-in-out;
-
-    &:hover {
-        transform: scale(1.01);
-        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
-    }
-}
-
-body.dark-mode .work-experience {
-    background-color: rgb(50, 50, 50);
-    box-shadow: 1px 1px 20px rgb(130, 130, 130);
-    color: white;
-
-    &:hover {
-        transform: scale(1.01);
-        box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
-    }
-}
-
-.work-experience h2 {
-    margin: 0 2rem;
-    color: rgb(122, 111, 155);
-}
-
-.work-experience p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-style: italic;
-    color: rgb(122, 111, 155);
-}
 
 /*--------------- Projects ---------------*/
 

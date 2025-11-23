@@ -1,6 +1,6 @@
 const favicon = document.querySelector("#favicon");
-const baseIcon = "http://127.0.0.1:5500/assets/duck_cursor.png"
-const reversedIcon = "http://127.0.0.1:5500/assets/duck_cursor_reversed.png"
+const baseIcon = "http://127.0.0.1:5500/assets/img/duck_cursor.png"
+const reversedIcon = "http://127.0.0.1:5500/assets/img/duck_cursor_reversed.png"
 const body = document.body
 
 console.log(favicon.href);
