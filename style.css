@@ -39,6 +39,44 @@ p::selection {
     background: rgb(122, 111, 155);
 }
 
+h2::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+h3::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+h4::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+a::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+i::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+img::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+li::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
+
+
+
 /*--------------- Tiles ---------------*/
 
 .tab-show {
@@ -597,6 +635,15 @@ a.disabled {
     pointer-events: none;
     color: #777777;
     background-color: rgb(212, 205, 244);
+}
+
+/*--------------- References ---------------*/
+
+#references-tiles h3 {
+    margin: 1vh 1vh 2vh;
+}
+#references-tiles h4 {
+    margin: 0;
 }
 
 /*--------------- Footer ---------------*/
