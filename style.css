@@ -346,7 +346,7 @@ body.dark-mode #about-me #main-tile {
 .diploma {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 500px;
     height: 300px;
@@ -370,6 +370,17 @@ body.dark-mode .diploma {
         transform: scale(1.01);
         box-shadow: 1px 1px 30px 0 rgba(139, 133, 193, 1);
     }
+}
+
+.diploma h2 {
+    margin: 0 2rem;
+    color: rgb(122, 111, 155);
+}
+
+.diploma h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(122, 111, 155);
 }
 
 /*--------------- Work Experience ---------------*/
@@ -469,8 +480,8 @@ body.dark-mode .project {
 
 .project h4 {
     font-size: 14px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-style: italic;
     color: rgb(122, 111, 155);
 }
