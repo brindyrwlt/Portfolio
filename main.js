@@ -38,3 +38,45 @@ toggleButton.addEventListener("click", () => {
     audioFile.fastSeek(0)
     audioFile.play()
 })
+
+
+const form = document.querySelector('form');
+const nomInput = document.querySelector('form #last-name');
+const prenomInput = document.querySelector('form #first-name');
+const emailInput = document.querySelector('form #mail');
+const messageInput = document.querySelector('form #message');
+const submitBtn = document.querySelector('form input[type=submit]');
+
+function checkFormValidity() {
+    const isValid =
+        nomInput.value.trim() !== '' &&
+        prenomInput.value.trim() !== '' &&
+        emailInput.value.trim() !== '' &&
+        messageInput.value.trim() !== '' &&
+        emailInput.validity.valid;
+
+    submitBtn.disabled = !isValid;
+}
+
+nomInput.addEventListener('input', checkFormValidity);
+prenomInput.addEventListener('input', checkFormValidity);
+emailInput.addEventListener('input', checkFormValidity);
+messageInput.addEventListener('input', checkFormValidity);
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nom = nomInput.value;
+    const prenom = prenomInput.value;
+    const email = emailInput.value;
+    const message = messageInput.value;
+    const destinataire = 'poirier.valentin@proton.me';
+
+    const subject = `Message de ${prenom} ${nom}`;
+    const body = `Bonjour,\n\nVous avez reçu un nouveau message de contact :\n\nNom : ${nom}\nPrénom : ${prenom}\nEmail : ${email}\n\nMessage :\n${message}`;
+
+    window.location.href = `mailto:${destinataire}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;;
+
+    form.reset();
+    submitBtn.disabled = true;
+});

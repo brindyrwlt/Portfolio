@@ -74,6 +74,11 @@ li::selection {
     background: rgb(122, 111, 155);
 }
 
+label::selection {
+    color: white;
+    background: rgb(122, 111, 155);
+}
+
 /*--------------- Tiles ---------------*/
 
 .tab-show {
@@ -133,8 +138,8 @@ body.dark-mode .content-tile {
 }
 
 .content-tile p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-style: italic;
     color: rgb(122, 111, 155);
 }
@@ -240,7 +245,7 @@ body #cv-download {
 
 @keyframes AnimateBG {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 
     50% {
@@ -248,7 +253,7 @@ body #cv-download {
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -649,6 +654,56 @@ a.disabled {
 }
 #references-tiles h4 {
     margin: 0;
+}
+
+/*--------------- Contact form ---------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 50vw; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 15px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+body.dark-mode input[type=text], select, textarea {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgb(122, 111, 155);;
+    color: white;
+    padding: 2vh 3vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    font-size: 20px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    font-size: 24px;
+}
+
+body.dark-mode label {
+    color: white;
 }
 
 /*--------------- Footer ---------------*/
